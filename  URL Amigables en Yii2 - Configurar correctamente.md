@@ -1,7 +1,6 @@
-URL Amigables en Yii2 - Configurar correctamente
+#URL Amigables en Yii2 - Configurar correctamente
 
-1. Crear un archivo .htaccess en la aplicacion/web/.htaccess
-------------------------------------------------------------------
+#1. Crear un archivo .htaccess en la aplicacion/web/.htaccess
 ```bash
 RewriteEngine on
 
@@ -18,8 +17,7 @@ $ cat /etc/apache2/mods-available/rewrite.load
 $ sudo a2enmod rewrite
 $ ls -al /etc/apache2/mods-enabled/rewrite.load
 ```
-#3. Ahora dirigirse a aplicacion/config/web.php y agregar o descomentar el siguiente codigo 
-    para activar las Url amigables. :)
+#3. Ahora dirigirse a aplicacion/config/web.php y agregar o descomentar el siguiente codigo para activar las Url amigables. :)
  ```bash
   'components' => [
         'urlManager' => [
