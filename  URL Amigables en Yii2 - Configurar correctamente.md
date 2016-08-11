@@ -5,12 +5,12 @@ URL Amigables en Yii2 - Configurar correctamente
 RewriteEngine on
 
 RewriteBase /~salem/alpha2/web
-
+'
 # If a directory or a file exists, use the request directly
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 # Otherwise forward the request to index.php
-RewriteRule . index.php
+RewriteRule . index.php'
 
 
 ----------------------------------------------------------------
