@@ -2,6 +2,7 @@ URL Amigables en Yii2 - Configurar correctamente
 
 1. Crear un archivo .htaccess en la aplicacion/web/.htaccess
 ------------------------------------------------------------------
+```bash
 RewriteEngine on
 
 RewriteBase /~salem/alpha2/web
@@ -11,24 +12,19 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 # Otherwise forward the request to index.php
 RewriteRule . index.php'
+```
 
-
-----------------------------------------------------------------
-----------------------------------------------------------------
-
-2. Configurar el servidor apache2, ingresar a la Terminal unix
+#2. Configurar el servidor apache2, ingresar a la Terminal unix
   EJECUTAR LOS SIGUIENTES COMANDOS PARA ACTIVAR LOS PERMISOS DE ESCRITURA
 --------------------------------------------------------------------------
-
+```bash
 $ cat /etc/apache2/mods-available/rewrite.load
 $ sudo a2enmod rewrite
 $ ls -al /etc/apache2/mods-enabled/rewrite.load
-
---------------------------------------------------------------------
------------------------------------------------------------------------
- 3. Ahora dirigirse a aplicacion/config/web.php y agregar o descomentar el siguiente codigo 
+```
+ #3. Ahora dirigirse a aplicacion/config/web.php y agregar o descomentar el siguiente codigo 
     para activar las Url amigables. :)
- 
+ ```bash
   'components' => [
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -39,3 +35,4 @@ $ ls -al /etc/apache2/mods-enabled/rewrite.load
             ],
         ],
   ],
+  ```
