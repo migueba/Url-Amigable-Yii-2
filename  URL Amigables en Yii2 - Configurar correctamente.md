@@ -15,11 +15,16 @@
   ```
 #2. Crear un archivo .htaccess en la aplicacion/web/.htaccess
 ```bash
+Options +FollowSymLinks
+IndexIgnore */*
+
 RewriteEngine on
 
+# If a directory or a file exists, use the request directly
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . index.php'
+# Otherwise forward the request to index.php
+RewriteRule . index.php
 ```
 
 #3. Configurar el servidor apache2, ingresar a la Terminal unix
